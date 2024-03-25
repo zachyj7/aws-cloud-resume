@@ -176,16 +176,18 @@
 									<p>Setting up the Front End</p>
 									<h5>
 										The first thing I did was decide which cloud service provider I wanted to work with. After doing some research, I found that there were three frontrunners- 
-										Amazon Web Services (AWS), Azure, and Google Cloud Platform (GCP). I chose to work with AWS and made my AWS account. The first service I used in AWS was S3. I created 
-										a bucket to store my website files, and hosted the frontend content as a static website. Once that was setup, I purchased a domain name using Route 53. Additionally, 
+										Amazon Web Services (AWS), Azure, and Google Cloud Platform (GCP). I chose to work with AWS and made my AWS account. After that, I needed HTML code for the website.
+										While I initially thought of coding all of the HTML from scratch, I realized that I could adapt an HTML5 template (shoutout to html5up.net for the amazing template) to fit my needs instead. 
+										This not only made my website look much better, but allowed me to focus my time on the more important parts of getting the site running. This was a cloud engineering showcase, not a web development showcase after all. Once I had my website all coded out in HTML, 
+										CSS and JS, the fun could commence. The first service I used in AWS was S3. I created a bucket to store my website files, and hosted the frontend content as a static website. Once that was setup, I purchased a domain name using Route 53. Additionally, 
 										I used Amazon Certificate Manager and got the necessary certificates to make the site secure. The last step was using CloudFront to secure the site over HTTPS. Once 
-										all this was done, the website front end was rollin’.
+										all this was done, the website front end was cookin' with gas.
 									</h5>
 									<br>
 									<p>Setting up the Back End</p>
 									<h5>
 										To get some experience using backend services like DynamoDB and Lambda, I setup a visitor count to track the amount of people 
-										who visited my site. I created a table using DynamoDB with one table entry that tracked the view count. Next up was to display and update this table entry whenever 
+										who visited my site (It is above, in the About Me section). I created a table using DynamoDB with one table entry that tracked the view count. Next up was to display and update this table entry whenever 
 										a new user visited the website. To do this, I created a function in Lambda using Python code that I wrote so that whenever the website was loaded/reloaded, the 
 										Lambda function was triggered, and the DynamoDB table entry was updated. I setup both the frontend and backend using the AWS Console rather than the AWS CLI because 
 										it was a lot easier for me to work through the process while visually seeing the services I was using. In the future, this will change as I want to start working with 
